@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-12"><ul class="list-group" >
+    <div class="list-group-item" *ngFor="let ingredient of ingredients; let i = index">
+        <a 
+        style="cursor:pointer" 
+        
+        (click)="selectTriggered(i)">
+    >
+    {{ ingredient.name}} ({{ingredient.amount}})  
+    </a>
+    </div>
+</ul></div>
+</div>
+

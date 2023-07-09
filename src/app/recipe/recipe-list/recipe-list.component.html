@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success" (click)="triggerAdd()">New Recipe</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <a href="#" 
+                class="list-group-item clearfix" 
+                *ngFor="let element of elements; let i = index"
+                (click)="triggerSelect(element.id)"
+            >
+                <app-recipe-item [recipe] ="element"></app-recipe-item>
+            </a>
+        </ul>
+    </div>
+</div>
